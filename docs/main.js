@@ -1,5 +1,5 @@
-import { Deposit } from "../dist/AddFunds.js";
-import { WithdrawAmount } from "../dist/WithdrawFunds.js";
-import { СheckBalance } from "../dist/CheckBalance.js";
-import { clearTransaction } from "../dist/ClearTransactions.js";
+import { Deposit } from "./AddFunds.js";
+import { WithdrawAmount } from "./WithdrawFunds.js";
+import { СheckBalance } from "./CheckBalance.js";
+import { clearTransaction } from "./ClearTransactions.js";
 //# sourceMappingURL=main.js.map
