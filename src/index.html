@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Банк — демо</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <link rel="stylesheet" href="./css/media.css" />
+    <link rel="icon" href="./img/MBank.ico" />
+  </head>
+  <body>
+    <div class="bank-app">
+      <div class="right-block">
+        <section class="header-bank">
+          <a href="https://t.me/Medok_777" target="_blank">
+            <img src="./img/myPhoto.jpg" alt="logo"
+          /></a>
+          <div>
+            <p class="bank-title--text">Мини-банк</p>
+            <span class="bank-description"
+              >Демонстрационный интерфейс от
+              <a href="https://medok777.github.io/Medok-V2/" target="_blank"
+                >Medoka</a
+              ></span
+            >
+          </div>
+        </section>
+
+        <section class="block-balance">
+          <p class="balance-title">Текущий баланс</p>
+          <div class="balance">
+            <span class="balance-dollar">$</span>
+            <h1 class="balance-sum">0.00</h1>
+            <span class="balance-USD">USD</span>
+          </div>
+          <div class="block-info">
+            <p class="account-info">account: •••• 3516</p>
+            <p class="update-info">
+              Последнее обновление: <span>Сегодня</span>
+            </p>
+          </div>
+        </section>
+
+        <section class="block-operations">
+          <div class="fast-operations">
+            <p class="operations-title">Быстрые операции</p>
+            <span class="operations-demonstration">Демонстрация</span>
+          </div>
+          <div class="operations-buttons">
+            <button class="operations-button operations-button--active">
+              Положить
+            </button>
+            <button class="operations-button">Снять</button>
+            <button id="clearTransactiosBtn" class="operations-button">
+              Очистить
+            </button>
+          </div>
+        </section>
+
+        <section class="block-transaction">
+          <div class="history-transaction">
+            <p class="transaction-title">История транзакций</p>
+            <span class="transaction-demonstration">последние операции</span>
+          </div>
+          <ul class="transactions"></ul>
+          <div class="disclaimer">
+            <b>Важно:</b>
+            <em
+              >Данные носят исключительно демонстрационный характер. Это не
+              реальный банковский сервис, и здесь не хранятся ваши денежные
+              средства.</em
+            >
+          </div>
+        </section>
+      </div>
+      <div class="left-block">
+        <div class="edit-balance">
+          <h3 class="edit-balance--title">Положить деньги</h3>
+          <form class="form-add">
+            <div class="add-sum">
+              <p class="add-sum--title">Сумма</p>
+              <input
+                class="add-sum--input"
+                type="number"
+                placeholder="Например: 100"
+              />
+            </div>
+            <div class="where">
+              <p class="where--title">Откуда</p>
+              <select id="AddWhereSelect" class="where-select">
+                <option value="• Банковская карта">Банковская карта</option>
+                <option value="• Перевод">Перевод</option>
+                <option value="• Наличные">Наличные</option>
+              </select>
+            </div>
+            <button id="addBtnSum" class="update-balance">Отправить</button>
+          </form>
+
+          <form class="form-reduce">
+            <p class="reduce-title">Снять деньги</p>
+            <div class="reduce-sum">
+              <p class="reduce-sum--title">Сумма</p>
+              <input
+                class="reduce-sum--input"
+                type="number"
+                placeholder="Например: 50"
+              />
+            </div>
+            <div class="where">
+              <p class="where--title">Откуда</p>
+              <select id="WithdrawWhereSelect" class="where-select">
+                <option value="• Банкомат">Банкомат</option>
+                <option value="• Перевод на карту">Перевод на карту</option>
+                <option value="• Покупки">Покупки</option>
+              </select>
+            </div>
+            <button id="withdrawBtnSum" class="update-balance">
+              Отправить
+            </button>
+          </form>
+          <h4 class="check-sum">Проверить баланс</h4>
+          <p class="check-text">
+            Баланс обновляется автоматически. Нажмите “Показать”, чтобы
+            просмотреть сумму.
+          </p>
+
+          <button class="check-button">Показать</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal-window">
+      <div class="modal">
+        <div class="modal-content">
+          <h3 class="modal-title">Текущий баланс:</h3>
+          <p class="modal-balance">wait...</p>
+          <button class="modal-btn">Закрыть</button>
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="/dist/main.js"></script>
+  </body>
+</html>
