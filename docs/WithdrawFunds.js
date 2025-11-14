@@ -50,6 +50,6 @@ export class WithdrawAmount {
     `;
     }
 }
-const fff = new WithdrawAmount();
-fff.withdrawSum();
+const withdrawAmount = new WithdrawAmount();
+withdrawAmount.withdrawSum();
 //# sourceMappingURL=WithdrawFunds.js.map
